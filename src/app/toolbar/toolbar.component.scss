@@ -1,0 +1,33 @@
+@import "../../styles.scss";
+
+  .toolbar__title {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: $primary-color--grape;
+    color: $secondary-color--egg;
+    font-size: x-large;
+    font-weight: 600;
+
+  svg {
+    fill: $secondary-color--egg;
+  }
+
+  button {
+    border: solid 1px $secondary-color--egg;
+  }
+
+  }
+
+  /* Responsive Styles */
+
+  @media screen and (max-width: 575px) {
+  }

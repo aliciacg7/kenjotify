@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    // background-color: #776981;
+  }
+
+/* Define global colors for the app */ 
+$primary-color--grape: #3d0861;
+$secondary-color--egg: #e0d88f;

@@ -1,0 +1,86 @@
+
+{
+  "albums": [
+    {
+      "title": "La sandunguera",
+      "artistId": "1",
+      "coverUrl": "string",
+      "year": 2019,
+      "genre": "latino"
+    },
+
+    {
+      "title": "Soy tu sicaria",
+      "artistId": "2",
+      "coverUrl": "string",
+      "year": 2017,
+      "genre": "perreo"
+    },
+
+    {
+      "title": "Fiebre",
+      "artistId": "3",
+      "coverUrl": "string",
+      "year": 2016,
+      "genre": "mariconeo"
+    },
+
+    {
+      "title": "Back in Black",
+      "artistId": "4",
+      "coverUrl": "string",
+      "year": 1980,
+      "genre": "rock"
+    },
+
+    {
+      "title": "Bakanito",
+      "artistId": "5",
+      "coverUrl": "string",
+      "year": 2020,
+      "genre": "trap"
+    }
+  ],
+
+  "artists": [
+    {
+      "id": "1",
+      "name": "Nathy Peluso",
+      "photoUrl": "string",
+      "birthdate": "Unknown Type: date",
+      "deathDate": "Unknown Type: date"
+    },
+
+    {
+      "id": "2",
+      "name": "Miss Nina",
+      "photoUrl": "string",
+      "birthdate": "Unknown Type: date",
+      "deathDate": "Unknown Type: date"
+    },
+
+    {
+      "id": "3",
+      "name": "Bad Gyal",
+      "photoUrl": "string",
+      "birthdate": "Unknown Type: date",
+      "deathDate": "Unknown Type: date"
+    },
+
+    {
+      "id": "4",
+      "name": "AC/DC",
+      "photoUrl": "string",
+      "birthdate": "Unknown Type: date",
+      "deathDate": "Unknown Type: date"
+    },
+
+    {
+      "id": "5",
+      "name": "Cecilio G",
+      "photoUrl": "string",
+      "birthdate": "Unknown Type: date",
+      "deathDate": "Unknown Type: date"
+    }
+  ]
+}
