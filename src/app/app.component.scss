@@ -31,20 +31,80 @@
 
   .principal {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 5em;
+    margin: 100px 40px 40px 40px;
 
     &__info {
       display: flex;
       flex-direction: column;
       align-content: space-around;
+      margin: 50px;
 
       &--buttons {
         display: flex;
         border-radius: 50px;
         justify-content: space-between;
       }
+    }
+  }
+
+  .section {
+
+    &__title {
+      margin: 20px 40px;
+      // display: flex;
+      // flex-direction: column;
+      
+      // justify-content: space-between;
+
+      &--button {
+        margin-left: 10px;
+        width: 10em;
+        background-color: $primary-color--grape;
+        color: $secondary-color--egg;
+        // border: $primary-color--grape 1px solid;
+        // display: flex;
+        // flex-direction: row-reverse;
+      }
+
+      &__text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &__title:before {
+      // content: '';
+      // width: 100%;
+      // border: #24292e solid 2px;
+      content:"";
+      display: flex;
+      height: 0.5em;
+      vertical-align: bottom;
+      width: 100%;
+      margin-bottom: 7px;
+      // margin-left: 10px;
+      border-top: 2px solid rgb(109, 107, 107);
+  }
+
+    &__body {
+      background-color: white;
+      color: $primary-color--grape;
+      border-radius: 6px;
+      box-shadow: 0 2px 18px 0 rgba(0,0,0,0.11);
+      // display: grid;
+      // grid-template-columns: repeat(5, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px 40px 45px 40px;
+      padding: 7px 40px 40px 40px;
+      border-left: 8px;
+      border-style: solid;
+      border-color: transparent;
+      width: auto;
     }
   }
 

@@ -1,0 +1,19 @@
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5em;
+    box-sizing: border-box;
+    padding: 10px;
+
+    &__picture {
+      height: 10em;
+      width: 10em;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+  }

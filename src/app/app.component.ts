@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-// import { localDB } from '../assets/localDB.json';
+import * as localDB from '../assets/localDB.json';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,11 @@ import { ViewEncapsulation } from '@angular/core';
   encapsulation : ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
-  // data = localDB
+
+  data = localDB.albums;
+
+  ngOnInit(): void {
+    console.log(this.data)
+  }
+  
 }

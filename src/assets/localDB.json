@@ -39,6 +39,22 @@
       "coverUrl": "string",
       "year": 2020,
       "genre": "trap"
+    },
+
+    {
+      "title": "Bakanito",
+      "artistId": "5",
+      "coverUrl": "string",
+      "year": 2020,
+      "genre": "trap"
+    },
+
+    {
+      "title": "Bakanito",
+      "artistId": "5",
+      "coverUrl": "string",
+      "year": 2020,
+      "genre": "trap"
     }
   ],
 
