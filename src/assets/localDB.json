@@ -64,7 +64,7 @@
       "name": "Nathy Peluso",
       "photoUrl": "string",
       "birthdate": "1991",
-      "deathDate": "Actualidad"
+      "deathdate": "Actualidad"
     },
 
     {
@@ -72,7 +72,7 @@
       "name": "Pole.",
       "photoUrl": "string",
       "birthdate": "1997",
-      "deathDate": "Actualidad"
+      "deathdate": "Actualidad"
     },
 
     {
@@ -80,7 +80,7 @@
       "name": "Bad Gyal",
       "photoUrl": "string",
       "birthdate": "1997",
-      "deathDate": "Actualidad"
+      "deathdate": "Actualidad"
     },
 
     {
@@ -88,7 +88,7 @@
       "name": "AC/DC",
       "photoUrl": "string",
       "birthdate": "1973",
-      "deathDate": "Actualidad"
+      "deathdate": "Actualidad"
     },
 
     {
@@ -96,7 +96,7 @@
       "name": "Cecilio G",
       "photoUrl": "string",
       "birthdate": "1993",
-      "deathDate": "Actualidad"
+      "deathdate": "Actualidad"
     }
   ]
 }

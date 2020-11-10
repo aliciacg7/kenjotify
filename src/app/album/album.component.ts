@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-album',
@@ -7,12 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AlbumComponent implements OnInit {
 
-  constructor() { 
-  }
-
   ngOnInit(): void {
   }
 
   @Input() albumInfo: Object;
+
+  @Input() enableDeleteAlbum: boolean;
+
+  @Output() displayEvent = new EventEmitter<boolean>();
+
+  constructor() {}
+
+  showDeleteModal() {
+    this.displayEvent.emit(true)
+  }
 
 }

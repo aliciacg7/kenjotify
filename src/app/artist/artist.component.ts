@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-artist',
@@ -13,4 +13,12 @@ export class ArtistComponent implements OnInit {
   }
 
   @Input() artistInfo: Object;
+
+  @Input() enableDeleteArtist: boolean;
+
+  @Output() displayEvent = new EventEmitter<boolean>();
+
+  showDeleteModal() {
+    this.displayEvent.emit(true)
+  }
 }
