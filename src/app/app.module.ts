@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AlbumComponent } from './album/album.component';
 import { ArtistComponent } from './artist/artist.component';
+import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ArtistComponent } from './artist/artist.component';
     FooterComponent,
     ToolbarComponent,
     AlbumComponent,
-    ArtistComponent
+    ArtistComponent,
+    ModalDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { ArtistComponent } from './artist/artist.component';
     FooterComponent,
     ToolbarComponent,
     AlbumComponent,
-    ArtistComponent
+    ArtistComponent,
+    ModalDeleteComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

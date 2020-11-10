@@ -11,9 +11,17 @@ import * as localDB from '../assets/localDB.json';
 export class AppComponent {
 
   data = localDB;
+  showDeleteModal = false;
+  
+  enableDeleteMode = {
+    albums: false,
+    artists: false
+  }
 
   ngOnInit(): void {
-    console.log(this.data)
   }
   
+  receiveDisplay($event) {
+    this.showDeleteModal = $event;
+  }
 }
