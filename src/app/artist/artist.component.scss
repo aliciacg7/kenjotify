@@ -1,0 +1,42 @@
+.album {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5em;
+    box-sizing: border-box;
+    padding: 10px;
+
+    &__picture {
+      height: 10em;
+      width: 10em;
+      border-radius: 50%;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    // &__delete-btn {
+    //   display: none;
+    // }
+
+    &__delete-btn {
+      cursor: pointer;
+      position: relative;
+      // width: 23px;
+      // height: 23px;
+      // border: 2px solid #ffffff;
+      top: 6px;
+      right: -79px;
+      // border-radius: 50%;
+      z-index: 2;
+    }
+}
+
+.album:hover {
+  transform: translateY(-0.30rem);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}

@@ -10,7 +10,7 @@ import * as localDB from '../assets/localDB.json';
 })
 export class AppComponent {
 
-  data = localDB.albums;
+  data = localDB;
 
   ngOnInit(): void {
     console.log(this.data)

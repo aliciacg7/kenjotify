@@ -25,7 +25,7 @@
     
   </div>
   <div class="section__body">
-    <app-album *ngFor="let album of data"
+    <app-album *ngFor="let album of data.default.albums"
       [albumInfo]="album">
     </app-album>
   </div>
@@ -43,9 +43,9 @@
     
   </div>
   <div class="section__body">
-    <app-album *ngFor="let album of data"
-      [albumInfo]="album">
-    </app-album>
+    <app-artist *ngFor="let artist of data.default.artists"
+      [artistInfo]="artist">
+    </app-artist>
   </div>
   <!-- <input type="hidden" #selection>
 

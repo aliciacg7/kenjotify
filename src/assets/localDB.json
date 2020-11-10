@@ -10,11 +10,11 @@
     },
 
     {
-      "title": "Soy tu sicaria",
+      "title": "Roma",
       "artistId": "2",
       "coverUrl": "string",
-      "year": 2017,
-      "genre": "perreo"
+      "year": 2019,
+      "genre": "pop"
     },
 
     {
@@ -22,7 +22,7 @@
       "artistId": "3",
       "coverUrl": "string",
       "year": 2016,
-      "genre": "mariconeo"
+      "genre": "dancehall"
     },
 
     {
@@ -34,27 +34,27 @@
     },
 
     {
-      "title": "Bakanito",
+      "title": "Por qué te vas",
       "artistId": "5",
       "coverUrl": "string",
-      "year": 2020,
+      "year": 2019,
       "genre": "trap"
     },
 
     {
-      "title": "Bakanito",
-      "artistId": "5",
+      "title": "Malamente",
+      "artistId": "6",
       "coverUrl": "string",
-      "year": 2020,
+      "year": 2017,
       "genre": "trap"
     },
 
     {
-      "title": "Bakanito",
-      "artistId": "5",
+      "title": "Let it be",
+      "artistId": "7",
       "coverUrl": "string",
-      "year": 2020,
-      "genre": "trap"
+      "year": 1968,
+      "genre": "pop"
     }
   ],
 
@@ -63,40 +63,40 @@
       "id": "1",
       "name": "Nathy Peluso",
       "photoUrl": "string",
-      "birthdate": "Unknown Type: date",
-      "deathDate": "Unknown Type: date"
+      "birthdate": "1991",
+      "deathDate": "Actualidad"
     },
 
     {
       "id": "2",
-      "name": "Miss Nina",
+      "name": "Pole.",
       "photoUrl": "string",
-      "birthdate": "Unknown Type: date",
-      "deathDate": "Unknown Type: date"
+      "birthdate": "1997",
+      "deathDate": "Actualidad"
     },
 
     {
       "id": "3",
       "name": "Bad Gyal",
       "photoUrl": "string",
-      "birthdate": "Unknown Type: date",
-      "deathDate": "Unknown Type: date"
+      "birthdate": "1997",
+      "deathDate": "Actualidad"
     },
 
     {
       "id": "4",
       "name": "AC/DC",
       "photoUrl": "string",
-      "birthdate": "Unknown Type: date",
-      "deathDate": "Unknown Type: date"
+      "birthdate": "1973",
+      "deathDate": "Actualidad"
     },
 
     {
       "id": "5",
       "name": "Cecilio G",
       "photoUrl": "string",
-      "birthdate": "Unknown Type: date",
-      "deathDate": "Unknown Type: date"
+      "birthdate": "1993",
+      "deathDate": "Actualidad"
     }
   ]
 }

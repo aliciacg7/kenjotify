@@ -6,13 +6,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AlbumComponent } from './album/album.component';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     ToolbarComponent,
-    AlbumComponent
+    AlbumComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { AlbumComponent } from './album/album.component';
   exports: [
     FooterComponent,
     ToolbarComponent,
-    AlbumComponent
+    AlbumComponent,
+    ArtistComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
