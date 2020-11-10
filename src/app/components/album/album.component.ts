@@ -10,7 +10,7 @@ export class AlbumComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() albumInfo: Object;
+  @Input() albumInfo: any;
 
   @Input() enableDeleteAlbum: boolean;
 
