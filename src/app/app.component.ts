@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-import * as localDB from '../assets/localDB.json';
+import * as localDB from 'src/assets/localDB.json';
 import { AlbumService } from 'src/app/services/album/album.service';
 import { ArtistService } from 'src/app/services/artist/artist.service';
 
@@ -23,8 +23,9 @@ export class AppComponent {
   constructor(private albumService: AlbumService, private artistService: ArtistService){}
 
   ngOnInit(): void {
-    this.albumService.getAllAlbums().subscribe((data) => {
-      console.log(data);
+    console.log(this.data)
+    this.albumService.getAllAlbums().subscribe((dataReal) => {
+      console.log(dataReal);
     });
   }
   

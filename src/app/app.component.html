@@ -33,7 +33,7 @@
   </div>
 
   <div class="section__body">
-    <app-album *ngFor="let album of data.default.albums"
+    <app-album *ngFor="let album of data.albums"
       [albumInfo]="album"
       [enableDeleteAlbum]="enableDeleteMode.albums"
       (displayEvent)="receiveDisplay($event)">
@@ -59,7 +59,7 @@
     
   </div>
   <div class="section__body">
-    <app-artist *ngFor="let artist of data.default.artists"
+    <app-artist *ngFor="let artist of data.artists"
       [artistInfo]="artist"
       [enableDeleteArtist]="enableDeleteMode.artists"
       (displayEvent)="receiveDisplay($event)">
