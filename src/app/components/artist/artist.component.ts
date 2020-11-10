@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { ArtistType } from 'src/app/models/artist/artist.module' 
 
 @Component({
   selector: 'app-artist',
@@ -12,7 +13,7 @@ export class ArtistComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() artistInfo: any;
+  @Input() artistInfo: ArtistType;
 
   @Input() enableDeleteArtist: boolean;
 
