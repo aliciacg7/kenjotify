@@ -63,19 +63,12 @@
 
     &__title {
       margin: 20px 40px;
-      // display: flex;
-      // flex-direction: column;
-      
-      // justify-content: space-between;
 
       &--button {
         margin-left: 10px;
         width: 10em;
         background-color: $primary-color--grape;
         color: $secondary-color--egg;
-        // border: $primary-color--grape 1px solid;
-        // display: flex;
-        // flex-direction: row-reverse;
       }
 
       &__text{
@@ -104,8 +97,6 @@
       color: $primary-color--grape;
       border-radius: 6px;
       box-shadow: 0 2px 18px 0 rgba(0,0,0,0.11);
-      // display: grid;
-      // grid-template-columns: repeat(5, 1fr);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -171,8 +162,3 @@
     margin-right: 4px;
   }
 
-
-  /* Responsive Styles */
-
-  @media screen and (max-width: 575px) {
-  }

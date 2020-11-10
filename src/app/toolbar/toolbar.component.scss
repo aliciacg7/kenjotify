@@ -11,11 +11,16 @@
     right: 0;
     height: 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: $primary-color--grape;
     color: $secondary-color--egg;
     font-size: x-large;
     font-weight: 600;
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column;
+    }
 
   svg {
     fill: $secondary-color--egg;
@@ -25,9 +30,4 @@
     border: solid 1px $secondary-color--egg;
   }
 
-  }
-
-  /* Responsive Styles */
-
-  @media screen and (max-width: 575px) {
   }
