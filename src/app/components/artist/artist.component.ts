@@ -12,7 +12,7 @@ export class ArtistComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() artistInfo: Object;
+  @Input() artistInfo: any;
 
   @Input() enableDeleteArtist: boolean;
 
