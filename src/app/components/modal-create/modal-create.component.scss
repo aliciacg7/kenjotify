@@ -1,0 +1,22 @@
+@import "../../../styles.scss";
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.562);
+  display: flex;
+  align-items: center;
+  
+  &__form{
+    padding: 15px;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.grape-button {
+  margin-left: 10px;
+  background-color: $primary-color--grape;
+  color: $secondary-color--egg;
+}

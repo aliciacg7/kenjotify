@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal-delete',
@@ -12,9 +12,14 @@ export class ModalDeleteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output() displayEvent = new EventEmitter<boolean>();
+  @Output() displayEvent = new EventEmitter<any>();
 
   showDeleteModal() {
-    this.displayEvent.emit(false)
+    this.displayEvent.emit({ show: false, type: 'delete', id: null, execute: false})
   }
+
+  confirmDelete() {
+    this.displayEvent.emit({ show: false, type: 'delete', execute: true })
+  }
+
 }

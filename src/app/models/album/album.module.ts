@@ -1,6 +1,7 @@
-export interface AlbumType { 
+export interface AlbumType {
+  _id?: String,
   title: String,
-  artistId: String,
+  artistId?: String,
   coverUrl?: String,
   year?: Number,
   genre?: String

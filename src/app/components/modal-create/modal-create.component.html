@@ -1,0 +1,52 @@
+<div class="modal" style="display: block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 >Crear nuevo {{ createType }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="showCreateModal()">&times;</button>
+      </div>
+      <form *ngIf="createType=='album'" class="modal__form">
+        <div class="form-group">
+          <label>Título del álbum</label>
+          <input [(ngModel)]="formNewAlbum.title" name="title" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserta el título">
+        </div>
+        <div class="form-group">
+          <label>Imagen del álbum</label>
+          <input [(ngModel)]="formNewAlbum.coverUrl" name="cover" class="form-control" placeholder="Inserta la url de la portada">
+        </div>
+        <div class="form-group">
+          <label>Año</label>
+          <input [(ngModel)]="formNewAlbum.year" name="year" class="form-control" placeholder="Inserta el año de lanzamiento">
+        </div>
+        <div class="form-group">
+          <label>Género</label>
+          <input [(ngModel)]="formNewAlbum.genre" name="genre" class="form-control" placeholder="Inserta el género musical">
+        </div>
+      </form>
+
+
+      <form class="modal__form" *ngIf="createType=='artista'">
+        <div class="form-group">
+          <label>Nombre del artista</label>
+          <input [(ngModel)]="formNewArtist.name" name="name" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Inserta el nombre">
+        </div>
+        <div class="form-group">
+          <label>Imagen del artista</label>
+          <input [(ngModel)]="formNewArtist.photoUrl" name="photo" class="form-control" placeholder="Inserta la url de la imagen">
+        </div>
+        <div class="form-group">
+          <label>Fecha de nacimiento</label>
+          <input [(ngModel)]="formNewArtist.birthdate" name="birthdate" class="form-control" placeholder="Formato YYYY-MM-DD">
+        </div>
+        <div class="form-group">
+          <label>Fecha de defunción o separación del grupo</label>
+          <input [(ngModel)]="formNewArtist.deathDate" name="deathdate" class="form-control" placeholder="Formato YYYY-MM-DD">
+        </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" (click)="showCreateModal()" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" (click)="submitNewData()" class="btn grape-button">Crear</button>
+      </div>
+    </div>
+  </div>
+</div>

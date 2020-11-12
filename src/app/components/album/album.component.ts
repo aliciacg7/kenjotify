@@ -8,19 +8,25 @@ import { AlbumType } from 'src/app/models/album/album.module';
 })
 export class AlbumComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   @Input() albumInfo: AlbumType;
 
   @Input() enableDeleteAlbum: boolean;
 
-  @Output() displayEvent = new EventEmitter<boolean>();
+  @Output() displayEvent = new EventEmitter<any>();
 
   constructor() {}
 
-  showDeleteModal() {
-    this.displayEvent.emit(true)
+  showDeleteModal(albumId) {
+    this.displayEvent.emit({ show: true, type: 'delete', id: albumId, execute: false, typeDelete: 'album'})
+  }
+
+  getUrlImage<String>(coverUrl) {
+    if(String(coverUrl).split(':')[0] !== 'https') {
+      coverUrl = '../../../assets/images/default-disk-soft.jpg'
+    }
+    return coverUrl
   }
 
 }
