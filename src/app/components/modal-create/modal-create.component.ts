@@ -1,6 +1,9 @@
 import { Component, OnInit, Output, EventEmitter, Input, ApplicationRef } from '@angular/core';
 import { AlbumType } from 'src/app/models/album/album.module';
+import { ArtistType } from 'src/app/models/artist/artist.module';
 import { AlbumService } from 'src/app/services/album/album.service';
+import { ArtistService } from 'src/app/services/artist/artist.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-modal-create',
@@ -16,10 +19,18 @@ export class ModalCreateComponent implements OnInit {
     genre: ''
   }
 
-  constructor(private albumService: AlbumService, public appRef: ApplicationRef) {}
-
-  ngOnInit(): void {
+  formNewArtist :ArtistType = { 
+    name: '',
+    photoUrl: '',
+    birthdate: '',
+    deathDate: '',
   }
+
+  constructor(private albumService: AlbumService, private artistService: ArtistService, public appRef: ApplicationRef, public datePipe: DatePipe) {}
+
+  ngOnInit(): void {}
+
+  @Input() createType:String;
 
   @Output() displayEvent = new EventEmitter<any>();
 
@@ -27,12 +38,21 @@ export class ModalCreateComponent implements OnInit {
     this.displayEvent.emit({ show: false, type: 'create' })
   }
 
-  submitNewAlbum() {
-    console.log(this.formNewAlbum)
-    this.albumService.createNewAlbum(this.formNewAlbum)
-      .subscribe((album) => {
-        console.log('Album ',album.title,' succesfully created');
-    });
+  submitNewData() {
+    if(this.createType=='album') {
+      console.log(this.formNewAlbum)
+      this.albumService.createNewAlbum(this.formNewAlbum)
+        .subscribe((album) => {
+          console.log('Album ',album.title,' succesfully created');
+      });
+    }
+    else if (this.createType=='artista') {
+      console.log(this.formNewArtist)
+      this.artistService.createNewArtist(this.formNewArtist)
+        .subscribe((artist) => {
+          console.log('Artist ',artist.name,' succesfully created');
+      });
+    }
     this.showCreateModal()
     this.appRef.tick()
   }

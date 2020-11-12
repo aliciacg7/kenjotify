@@ -1,8 +1,8 @@
 export interface ArtistType { 
-  id: String,
+  _id?: String,
   name: String,
   photoUrl?: String,
-  birthdate: Number,
-  deathdate?: any
+  birthdate: String,
+  deathDate?: String
 }
 

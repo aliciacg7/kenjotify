@@ -18,7 +18,7 @@ export class ModalDeleteComponent implements OnInit {
     this.displayEvent.emit({ show: false, type: 'delete', id: null, execute: false})
   }
 
-  confirmDeleteAlbum() {
+  confirmDelete() {
     this.displayEvent.emit({ show: false, type: 'delete', execute: true })
   }
 

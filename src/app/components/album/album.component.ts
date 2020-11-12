@@ -19,7 +19,7 @@ export class AlbumComponent implements OnInit {
   constructor() {}
 
   showDeleteModal(albumId) {
-    this.displayEvent.emit({ show: true, type: 'delete', id: albumId, execute: false})
+    this.displayEvent.emit({ show: true, type: 'delete', id: albumId, execute: false, typeDelete: 'album'})
   }
 
   getUrlImage<String>(coverUrl) {

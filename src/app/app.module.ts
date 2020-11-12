@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';  
+import {DatePipe} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,7 +28,8 @@ import { ModalCreateComponent } from 'src/app/components/modal-create/modal-crea
     BrowserModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   exports: [
     FooterComponent,
@@ -36,7 +39,7 @@ import { ModalCreateComponent } from 'src/app/components/modal-create/modal-crea
     ModalDeleteComponent,
     ModalCreateComponent
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
