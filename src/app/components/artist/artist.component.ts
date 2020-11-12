@@ -17,9 +17,9 @@ export class ArtistComponent implements OnInit {
 
   @Input() enableDeleteArtist: boolean;
 
-  @Output() displayEvent = new EventEmitter<boolean>();
+  @Output() displayEvent = new EventEmitter<any>();
 
   showDeleteModal() {
-    this.displayEvent.emit(true)
+    this.displayEvent.emit({ show: true, type: 'delete' })
   }
 }

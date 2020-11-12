@@ -1,7 +1,8 @@
 export interface AlbumType { 
   title: String,
-  artistId: String,
+  artistId?: String,
   coverUrl?: String,
   year?: Number,
-  genre?: String
+  genre?: String,
+  _id?: String
 }

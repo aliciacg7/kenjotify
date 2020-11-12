@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +10,7 @@ import { ToolbarComponent } from 'src/app/components/toolbar/toolbar.component';
 import { AlbumComponent } from 'src/app/components/album/album.component';
 import { ArtistComponent } from 'src/app/components/artist/artist.component';
 import { ModalDeleteComponent } from 'src/app/components/modal-delete/modal-delete.component';
+import { ModalCreateComponent } from 'src/app/components/modal-create/modal-create.component';
 
 @NgModule({
   declarations: [
@@ -17,19 +19,22 @@ import { ModalDeleteComponent } from 'src/app/components/modal-delete/modal-dele
     ToolbarComponent,
     AlbumComponent,
     ArtistComponent,
-    ModalDeleteComponent
+    ModalDeleteComponent,
+    ModalCreateComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     FooterComponent,
     ToolbarComponent,
     AlbumComponent,
     ArtistComponent,
-    ModalDeleteComponent
+    ModalDeleteComponent,
+    ModalCreateComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

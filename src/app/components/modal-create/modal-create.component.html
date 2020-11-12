@@ -1,0 +1,42 @@
+<div class="modal" aria-hidden="true" style="display: block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Crear nuevo álbum</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="showCreateModal()">&times;</button>
+      </div>
+      <form class="modal__form">
+        <div class="form-group">
+          <label>Título del álbum</label>
+          <input [(ngModel)]="formNewAlbum.title" name="title" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserta el título">
+        </div>
+        <!-- <div class="form-group">
+          <label>Artista</label>
+          <select [(ngModel)]="formNewAlbum.artistId" name="artistid" class="form-control" placeholder="Selecciona el artista">
+            <option>Artista 1</option>
+            <option>Artista 2</option>
+            <option>Artista 3</option>
+            <option>Artista 4</option>
+            <option>Artista 5</option>
+          </select>
+        </div> -->
+        <div class="form-group">
+          <label>Imagen del álbum</label>
+          <input [(ngModel)]="formNewAlbum.coverUrl" name="cover" class="form-control" placeholder="Inserta la url de la portada">
+        </div>
+        <div class="form-group">
+          <label>Año</label>
+          <input [(ngModel)]="formNewAlbum.year" name="year" class="form-control" placeholder="Inserta el año de lanzamiento">
+        </div>
+        <div class="form-group">
+          <label>Género</label>
+          <input [(ngModel)]="formNewAlbum.genre" name="genre" class="form-control" placeholder="Inserta el género musical">
+        </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" (click)="showCreateModal()" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" (click)="submitNewAlbum()" class="btn grape-button">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

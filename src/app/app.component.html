@@ -3,11 +3,16 @@
 <app-toolbar></app-toolbar>
 
 <div class="principal">
-  <img class="principal__picture" src="../assets/images/photo-1494253109108-2e30c049369b.jpeg" alt="example" height="250em" width="250em">
+  <img class="principal__picture" src="../assets/images/default-disk-2.jpg" alt="example" height="250em" width="250em">
   <div class="principal__info">
+    <!-- <div class="principal__info--album">
+      <span>Artista: </span>
+      <span>Año: {{ albumInfo.year }}</span>
+      <span>Género: {{ albumInfo.genre }}</span>
+    </div> -->
     <h2>Últimas tendencias</h2>
     <div class="principal__info--buttons">
-      <button type="button" class="btn btn-outline-success m-2">Reproducir</button>
+      <button type="button" class="btn btn-outline m-2">Reproducir</button>
       <button type="button" class="btn btn-outline-dark m-2">Ver más tendencias</button>
     </div>
   </div>
@@ -15,14 +20,14 @@
 
   <div class="section">
     <h4 class="section__title">Mis álbumes
-      <button class="btn section__title--button">Añadir álbum
+      <button class="btn section__title--button" (click)="showModal.create = !showModal.create">Añadir álbum
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
           <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
         </svg>
       </button>
 
-      <button (click)="enableDeleteMode.albums = !enableDeleteMode.albums" class="btn section btn-danger ml-3">Eliminar álbum
+      <button (click)="enableDeleteMode.albums = !enableDeleteMode.albums" class="btn section btn-outline-danger ml-3">Eliminar álbum
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
           <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
@@ -33,7 +38,7 @@
   </div>
 
   <div class="section__body">
-    <app-album *ngFor="let album of data.albums"
+    <app-album *ngFor="let album of albumData"
       [albumInfo]="album"
       [enableDeleteAlbum]="enableDeleteMode.albums"
       (displayEvent)="receiveDisplay($event)">
@@ -49,7 +54,7 @@
         </svg>
       </button>
 
-      <button (click)="enableDeleteMode.artists = !enableDeleteMode.artists" class="btn section btn-danger ml-3">Eliminar artista
+      <button (click)="enableDeleteMode.artists = !enableDeleteMode.artists" class="btn section btn-outline-danger ml-3">Eliminar artista
         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
           <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
@@ -59,7 +64,7 @@
     
   </div>
   <div class="section__body">
-    <app-artist *ngFor="let artist of data.artists"
+    <app-artist *ngFor="let artist of artistData"
       [artistInfo]="artist"
       [enableDeleteArtist]="enableDeleteMode.artists"
       (displayEvent)="receiveDisplay($event)">
@@ -67,9 +72,14 @@
   </div>
 
   <app-modal-delete
-    *ngIf="showDeleteModal"
+    *ngIf="showModal.delete"
     (displayEvent)="receiveDisplay($event)"
   ></app-modal-delete>
+
+  <app-modal-create
+    *ngIf="showModal.create"
+    (displayEvent)="receiveDisplay($event)">
+  </app-modal-create>
 
   <!-- Links -->
 <div class="content" role="main">
